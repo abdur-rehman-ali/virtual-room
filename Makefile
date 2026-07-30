@@ -1,4 +1,4 @@
-.PHONY: install sync run migrate makemigrations shell add lock
+.PHONY: install sync run migrate makemigrations shell shell-plus add lock
 
 install:
 	uv sync
@@ -17,6 +17,9 @@ makemigrations:
 
 shell:
 	uv run python manage.py shell
+
+shell-plus:
+	uv run python manage.py shell_plus
 
 add:
 	uv add $(pkg)
