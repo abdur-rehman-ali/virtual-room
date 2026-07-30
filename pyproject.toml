@@ -12,5 +12,12 @@ dependencies = [
 dev = [
     "django-extensions>=4.1",
     "ipython>=9.15.0",
+    "ruff>=0.16.1",
     "werkzeug>=3.1.8",
 ]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # pycodestyle, pyflakes, isort

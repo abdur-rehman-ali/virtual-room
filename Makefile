@@ -1,4 +1,4 @@
-.PHONY: install sync run migrate makemigrations shell shell-plus add lock
+.PHONY: install sync run migrate makemigrations shell shell-plus add lock lint format
 
 install:
 	uv sync
@@ -26,3 +26,9 @@ add:
 
 lock:
 	uv lock
+
+lint:
+	uv run ruff check .
+
+format:
+	uv run ruff format .
