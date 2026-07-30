@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # Third party
     "django_extensions",
     "rest_framework",
+    "drf_spectacular",
     "debug_toolbar",
 ]
 
@@ -124,4 +125,11 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Virtual Room",
+    "DESCRIPTION": "Django REST Framework API for Virtual Room",
+    "VERSION": "1.0.0",
 }
