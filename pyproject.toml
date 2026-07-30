@@ -11,4 +11,5 @@ dependencies = [
 [dependency-groups]
 dev = [
     "django-extensions>=4.1",
+    "werkzeug>=3.1.8",
 ]
